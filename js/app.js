@@ -149,9 +149,11 @@ function preguntarPresupuesto() {
     presupuestoUsuario === null ||
     isNaN(presupuestoUsuario) ||
     presupuestoUsuario <= 0
-  )
-    // Presupuesto valido
-    presupuesto = new Presupuesto(presupuestoUsuario);
+  ) {
+    window.location.reload();
+  }
+  // Presupuesto valido
+  presupuesto = new Presupuesto(presupuestoUsuario);
 
   ui.insertarPresupuesto(presupuesto);
 }
